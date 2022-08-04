@@ -440,7 +440,7 @@ Sidebar
   cursor: pointer;
 }
 .sidebar-link {
-  font-size: 1.2rem;
+  font-size: 2rem;
   text-transform: capitalize;
   color: var(--clr-grey-1);
 }
