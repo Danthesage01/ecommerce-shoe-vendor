@@ -392,6 +392,15 @@ Hero
   outline-offset: 0.25rem;
 }
 
+@media screen and (min-width: 800px) {
+  .hero-container h2 {
+    letter-spacing: 0.2rem;
+  }
+  .hero-container h1 {
+    letter-spacing: 0.25rem;
+    font-size: 5rem;
+  }
+}
 /*
 =============== 
 Sidebar
