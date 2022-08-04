@@ -294,7 +294,13 @@ Navbar
   font-weight: bold;
   font-size: 1rem;
 }
+.nav-link {
 
+    margin-right: 2rem;
+    letter-spacing: var(--spacing);
+    transition: var(--transition);
+    font-size: 1.2rem;
+  }
 @media screen and (min-width: 800px) {
   .nav-center {
     position: relative;
