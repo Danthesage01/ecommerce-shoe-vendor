@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Products | Shoe Vendor</title>
+</head>
+
+<body>
+  <nav id="home" class="navbar page">
+    <nav class="navbar">
+      <div class="nav-center">
+        <!-- nav -->
+        <div>
+          <button class="toggle-nav">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html" class="nav-link">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="products.html" class="nav-link">
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="nav-link">
+                About
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <i class="fa-solid fa-shopping-cart"></i>
+          </button>
+          <span class="cart-item-count"></span>
+        </div>
+      </div>
+    </nav>
+  </nav>
+  <!-- hero  -->
+  <section class="page-hero">
+    <div class="section-center">
+      <h3 class="page-hero-title">/ Products</h3>
+    </div>
+  </section>
+  <!-- Sidebar -->
+  <div class="sidebar-overlay">
+    <aside class="sidebar">
+      <!-- close btn -->
+      <button class="sidebar-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul class="sidebar-links">
+        <li>
+          <a href="index.html" class="sidebar-link">
+            <i class="fas fa-home fa-fw"></i>
+            home
+          </a>
+        </li>
+        <li>
+          <a href="products.html" class="sidebar-link">
+            <i class="fas fa-couch fa-fw"></i>
+            products
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="sidebar-link">
+            <i class="fas fa-book fa-fw"></i>
+            about
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <!-- Cart -->
+  <div class="cart-overlay">
+    <aside class="cart">
+      <button class="cart-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <header>
+        <h3 class="text-slanted">Your Cart</h3>
+      </header>
+      <!-- cart items -->
+      <div class="cart-items">
+
+      </div>
+      <footer>
+        <h3 class="cart-total text-slanted">
+        </h3>
+        <button class="cart-checkout btn">checkout</button>
+      </footer>
+    </aside>
+  </div>
+  <section class="products">
+    <!-- filters -->
+    <div class="filters">
+      <div class="filters-container">
+        <form class="input-form">
+          <input type="text" class="search-input" placeholder="Sneakers name / brand">
+        </form>
+        <!-- Categories -->
+        <h4>Brand</h4>
+        <article class="companies">
+        </article>
+        <h4>Gender</h4>
+        <article class="gender">
+          <button class="gender-btn">all</button>
+          <button class="gender-btn">ikea</button>
+        </article>
+        <!-- Price -->
+        <h4>Price</h4>
+        <form class="price-form">
+          <input type="range" class="price-filter" min="0" value="50" max="200">
+        </form>
+        <p class="price-value"></p>
+      </div>
+    </div>
+    <!-- products -->
+    <div class="products-container">
+      <div class="section-loading">
+        <h2 class="loading"></h2>
+      </div>
+    </div>
+      <!-- Top link -->
+      <a href="#home" class="scroll-link top-link">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+  </section>
+  <script type="module" src="./src/pages/products.js"></script>
+</body>
+
+</html>
