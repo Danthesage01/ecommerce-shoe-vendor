@@ -368,14 +368,14 @@ Hero
   animation: slideFromRight 5s ease-in-out 1;
   font-weight: 900;
   margin-bottom: -0.5rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: var(--spacing);
 }
 .hero-container h1 {
   text-transform: uppercase;
   color: var(--clr-primary);
   font-weight: 900;
-  font-size: 5rem;
-  letter-spacing: 0.25rem;
+  font-size: 3.5rem;
+  letter-spacing: var(--spacing);
   margin: 1.5rem;
   animation: slideFromLeft 5s ease-in-out 1;
 }
@@ -792,17 +792,18 @@ Products Page
   position: absolute;
   top: 5rem;
   left: 0.7rem;
-  line-height: 2;
+  line-height: 1.5;
   width: 100%;
   color: var(--clr-red-light);
-  font-size: 0.85rem;
+  font-size: 0.6rem;
   text-align: center;
   margin-top: 4rem;
 }
 
 @media screen and (min-width: 768px) {
   .filter-error {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    line-height: 1;
   }
 }
 

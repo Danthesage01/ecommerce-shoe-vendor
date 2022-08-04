@@ -44,13 +44,25 @@ localStorage.setItem(name, JSON.stringify(item))
 
 function scrollToTop(){
   const topScroll = getElement(".top-link")
+  const cartOverlay = getElement(".cart-overlay")
+  const sidebarOverlay = getElement(".sidebar-overlay")
+ 
   window.addEventListener("scroll", () => {
     const scrollHeight = window.pageYOffset
+
+    
     if (scrollHeight > 500) {
       topScroll.classList.add("show-toplink")
     } else {
       topScroll.classList.remove("show-toplink")
     }
+    if (cartOverlay.classList.contains("show")) {
+      topScroll.classList.remove("show-toplink")
+    }
+    if (sidebarOverlay.classList.contains("show")) {
+      topScroll.classList.remove("show-toplink")
+    }
+
   })
 
   topScroll.addEventListener("click", e => {
