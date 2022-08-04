@@ -294,13 +294,7 @@ Navbar
   font-weight: bold;
   font-size: 1rem;
 }
-.nav-link {
 
-    margin-right: 1rem;
-    /* letter-spacing: var(--spacing); */
-    transition: var(--transition);
-    font-size: 1rem;
-  }
 @media screen and (min-width: 800px) {
   .nav-center {
     position: relative;
@@ -446,7 +440,7 @@ Sidebar
   cursor: pointer;
 }
 .sidebar-link {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: capitalize;
   color: var(--clr-grey-1);
 }
