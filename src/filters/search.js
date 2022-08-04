@@ -24,7 +24,9 @@ const setupSearch = (sneakersStore) => {
               <h3 class="filter-error">
               Hey Buddy!
               <br>
-                No sneakers with such a name or brand in stock.
+                No sneakers with such a name 
+                <br>
+                or brand in stock.
                 <br> 
                 Please check back later. 
               </h3>
