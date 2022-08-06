@@ -175,6 +175,24 @@ Animation
 */
 
 /* Hero animation from right */
+@-webkit-keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 @keyframes slideFromRight {
   0% {
     transform: translateX(1000px);
@@ -194,6 +212,24 @@ Animation
   }
 }
 /* Hero animation from left */
+@-webkit-keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 @keyframes slideFromLeft {
   0% {
     transform: translateX(-1000px);
@@ -213,6 +249,20 @@ Animation
   }
 }
 /* Hero button animation to show */
+@-webkit-keyframes show {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @keyframes show {
   0% {
     transform: scale(1.5);
@@ -365,7 +415,8 @@ Hero
 .hero-container h2 {
   font-family: var(--ff-tertiary);
   color: var(--clr-white);
-  animation: slideFromRight 5s ease-in-out 1;
+  -webkit-animation: slideFromRight 5s ease-in-out 1;
+          animation: slideFromRight 5s ease-in-out 1;
   font-weight: 900;
   margin-bottom: -0.5rem;
   letter-spacing: var(--spacing);
@@ -377,7 +428,8 @@ Hero
   font-size: 3.5rem;
   letter-spacing: var(--spacing);
   margin: 1.5rem;
-  animation: slideFromLeft 5s ease-in-out 1;
+  -webkit-animation: slideFromLeft 5s ease-in-out 1;
+          animation: slideFromLeft 5s ease-in-out 1;
 }
 .hero-btn {
   outline: 0.125rem solid var(--clr-primary);
@@ -385,7 +437,8 @@ Hero
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
   margin-top: 3rem;
-  animation: show 5s linear 1;
+  -webkit-animation: show 5s linear 1;
+          animation: show 5s linear 1;
 }
 .hero-btn:hover {
   outline: 0.125rem solid var(--clr-white);
@@ -543,13 +596,15 @@ Cart
   margin: 1rem 0;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  column-gap: 1.5rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
   align-items: center;
 }
 .cart-item-img {
   width: 85px;
   height: 60px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: var(--radius);
 }
 .cart-item-name {
@@ -611,7 +666,8 @@ product & Homepage
 }
 .product-img {
   height: 15rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: var(--radius);
 }
 .product-container {
@@ -721,6 +777,7 @@ Products Page
   position: relative;
 }
 .filters-container {
+  position: -webkit-sticky;
   position: sticky;
   top: 1rem;
   margin-bottom: 1.5rem;
@@ -735,6 +792,22 @@ Products Page
   border-radius: var(--radius);
   border-color: transparent;
   letter-spacing: var(--spacing);
+}
+.search-input::-webkit-input-placeholder {
+  text-transform: capitalize;
+  font-size: smaller;
+}
+.search-input::-moz-placeholder {
+  text-transform: capitalize;
+  font-size: smaller;
+}
+.search-input:-ms-input-placeholder {
+  text-transform: capitalize;
+  font-size: smaller;
+}
+.search-input::-ms-input-placeholder {
+  text-transform: capitalize;
+  font-size: smaller;
 }
 .search-input::placeholder {
   text-transform: capitalize;
@@ -772,6 +845,7 @@ Products Page
     grid-template-columns: 200px 1fr;
   }
   .categories {
+    position: -webkit-sticky;
     position: sticky;
     top: 1rem;
   }
@@ -845,7 +919,8 @@ Single Product Page
   width: 100%;
   height: 20rem;
   border-radius: var(--radius);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .single-product-brand {
   font-size: 1.2rem;
@@ -888,6 +963,11 @@ Single Product Page
 }
 
 /* Loader */
+@-webkit-keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes loader {
   to {
     transform: rotate(360deg);
@@ -900,7 +980,8 @@ Single Product Page
   border: 5px solid var(--clr-grey-1);
   border-radius: 50%;
   border-top-color: var(--clr-primary);
-  animation: loader 0.6s linear infinite;
+  -webkit-animation: loader 0.6s linear infinite;
+          animation: loader 0.6s linear infinite;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -909,6 +990,20 @@ Single Product Page
 }
 
 /* Top Link */
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @keyframes bounce {
   0% {
     opacity: 0;
@@ -936,7 +1031,8 @@ Single Product Page
   place-items: center;
   border-radius: var(--radius);
   color: var(--clr-white);
-  animation: bounce 5s ease-in-out infinite;
+  -webkit-animation: bounce 5s ease-in-out infinite;
+          animation: bounce 5s ease-in-out infinite;
   visibility: hidden;
   z-index: -100;
 }
