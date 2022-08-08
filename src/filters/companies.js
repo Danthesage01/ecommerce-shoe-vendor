@@ -10,7 +10,9 @@ const setupCompanies = (sneakersStore) => {
     return values
   }, ["All"])
   const brandsDOM = getElement(".companies")
-  brandsDOM.innerHTML = brands.map(brand=>{
+
+ 
+  brandsDOM.innerHTML = brands.map((brand, index)=>{
     return `<button class="company-btn">${brand}</button>`
   }).join("")
   brandsDOM.addEventListener("click", function(e){
