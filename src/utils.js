@@ -1,4 +1,6 @@
-const URL = "https://fake-shoevendor.herokuapp.com/sneakers/"
+// const URL = "https://fake-shoevendor.herokuapp.com/sneakers/"
+const URL = "https://fake-shoe-server.herokuapp.com/products/"
+
 
 // A getElement function to get elements from the DOM
 const getElement = (selection) => {
