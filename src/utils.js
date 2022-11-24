@@ -1,7 +1,10 @@
 // const URL = "https://fake-shoevendor.herokuapp.com/sneakers/"
 // const URL = "https://fake-shoe-server.herokuapp.com/products/"
-const URL = "https://restfapi.netlify.app/api/sneakers";
-const SPURL = "https://restfapi.netlify.app/api/single-sneaker?id=";
+// const URL = "https://restfapi.netlify.app/api/sneakers";
+// const SPURL = "https://restfapi.netlify.app/api/single-sneaker?id=";
+
+const URL = "https://restfapi.netlify.app/api/allsneakers";
+const SPURL = "https://restfapi.netlify.app/api/allsneakers?id=";
 
 // A getElement function to get elements from the DOM
 const getElement = (selection) => {
