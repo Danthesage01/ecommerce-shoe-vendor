@@ -12,9 +12,9 @@ const setupStore = (products) =>{
   // iterating over the fetched products and setting it to sneakersStore
   sneakersStore = products.map(product =>{
   // destructuring items in the fetched products
-    const { id, image, featured, color:colors, description, brand, gender, name, price } = product
+    const { id, url, images, featured, colors, description, brand, gender, name, price } = product
   // returning the destructured items 
-    return { id, image, featured, colors, description, brand, gender, name, price }
+    return { id, url, images, featured, colors, description, brand, gender, name, price }
   })
   // set sneakersStore in localstorage 
   setStorageItem("sneakersStore", sneakersStore)

@@ -11,8 +11,10 @@ import { getElement, scrollToTop } from "./src/utils.js"
 
 const init = async() =>{
 const products = await fetchProducts()
+console.log(products, "index.js")
 setupStore(products)
 const featured = sneakersStore.filter(product=> product.featured === true )
+console.log(featured);
 
 displayFP(featured, getElement(".featured-center"))
 }

@@ -5,7 +5,7 @@ import "../cart/setupCart.js"
 
 // Specific Imports
 import { addToCart } from "../cart/setupCart.js"
-import { URL, getElement, formatPrice, scrollToTop } from "../utils.js"
+import { URL, SPURL, getElement, formatPrice, scrollToTop } from "../utils.js"
 
 
 // selections of items
@@ -29,17 +29,18 @@ window.addEventListener("DOMContentLoaded", async () => {
   const ID = params.get("id")
 
   try {
-    const res = await fetch(`${URL}${ID}`)
+    const res = await fetch(`${SPURL}${ID}`)
     if (res.ok === true && res.status === 200) {
       const sneakers = await res.json()
-      const { id, brand, color:colors, description, name, gender, price, image } = sneakers
+      const { id } = sneakers
+      const { brand, colors, description, name, gender, price, images } = sneakers.fields
 
       sneakersID = id
 
       pageTitleDOM.textContent = `/ ${name}`
       document.title = `${name}`
       imgDOM.alt = `${name}`
-      imgDOM.src = image
+      imgDOM.src = images[0].url
       nameDOM.textContent = name
       brandDOM.textContent = `by ${brand}`
       priceDOM.textContent = formatPrice(price)

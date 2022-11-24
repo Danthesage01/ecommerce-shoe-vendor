@@ -3,11 +3,12 @@ import { addToCart } from "./cart/setupCart.js"
 
 const displayFP = (products, element, filters) => {
   element.innerHTML = products.map(product => {
-    const { id, name, brand, image, price } = product
+    console.log(product, "displayProducts.js");
+    const { id, name, brand, url, price } = product
     return `
         <article class="product">
           <div class="product-container">
-            <img src="${image}" class="product-img img" alt="${name}" />
+            <img src="${url}" class="product-img img" alt="${name}" />
             <div class="product-icons">
               <a href="product.html?id=${id}" class="product-icon">
                 <i class="fas fa-search"></i>
@@ -38,11 +39,11 @@ const displayFP = (products, element, filters) => {
 
 const displayAP = (products, element, filters) => {
   element.innerHTML = products.map(product => {
-    const { id, name, image, price } = product
+    const { id, name, url, price } = product
     return `
         <article class="product">
           <div class="product-container">
-            <img src="${image}" class="product-img img" alt="${name}" />
+            <img src="${url}" class="product-img img" alt="${name}" />
             <div class="product-icons">
               <a href="product.html?id=${id}" class="product-icon">
                 <i class="fas fa-search"></i>
